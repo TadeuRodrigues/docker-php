@@ -1,11 +1,11 @@
-FROM php:7.0.25-fpm
+FROM php:7.0.26-fpm
 
 # Updating and installing some dependences
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng12-dev \
     libmcrypt-dev libxslt-dev libicu-dev libmemcached-dev zlib1g-dev \
-    libmagickwand-dev libmagickcore-dev git php-soap && \
+    libmagickwand-dev libmagickcore-dev git && \
 # Clear cache
     apt-get clean && \
     apt-get purge -y --auto-remove
